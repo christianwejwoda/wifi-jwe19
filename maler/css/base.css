@@ -9,6 +9,8 @@ body {
 :root {
   --screen-max: 1200px;
   --base-font: 'Montserrat', sans-serif;
+  --footer-font: 'Pridi', sans-serif;
+  --footer-link-color: #d0cece;
 }
 
 @font-face {
@@ -29,6 +31,24 @@ body {
   font-weight: lighter;
 }
 
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi/Pridi-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi/Pridi-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi/Pridi-Light.ttf);
+  font-weight: lighter;
+}
+
 body {
   font-family: var(--base-font);
   font-size: 100%;
@@ -37,9 +57,6 @@ body {
 html * {
   box-sizing: border-box;
 }
-/* h1,ul {
-margin-left: 60px;
-} */
 
 header {
   position: relative;
@@ -47,9 +64,6 @@ header {
   height: 45vw;
   background: lightgreen;
   overflow: hidden;
-  /* border-bottom: 10px blue; */
-  /* padding-bottom: 10px blue; */
-
 }
 
 header img {
@@ -60,19 +74,18 @@ header img {
   display: block;
 }
 
-/* header */
- .inner-wrapper {
+main .inner-wrapper,
+header .inner-wrapper,
+footer .inner-wrapper {
   position: relative;
   max-width: var(--screen-max);
   margin: 0 auto;
-  /* background: red; */
 }
 
 header h1 {
   position: absolute;
   bottom: 0;
   left: 0;
-  /* background: green; */
   width: 100%;
 }
 
@@ -80,35 +93,72 @@ main {
   background: lightgrey;
 }
 
-
 footer {
-  position: relative;
-  width: 100%;
-  height: 30vh;
-  padding: 20px;
   background: #333;
+  font-family: var(--footer-font);
+  font-size: 100%;
+  font-weight: lighter;
 }
 
-div.footer-top {
-  font-size: 20px;
+footer .footer-top,
+footer .footer-bottom {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: grey;
 }
 
-nav.footer-left {
-  position: absolute;
-  top: 0;
-  left: 0;
+footer .footer-left {
+  flex: 1;
 }
+
+footer .footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-right ul {
+  text-align: right;
+}
+
+footer a {
+  color: var(--footer-link-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*
 nav.footer-right {
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
+  width: 50%;
 }
+
 nav.footer-left ul {
   list-style: none;
   padding: 0;
+  margin: 0 auto;
 }
+
 nav.footer-right ul {
   list-style: none;
   padding: 0;
+  margin: 0 auto;
   text-align: right;
 }
+
+div.footer-bottom-left {
+  float: left;
+  width: 50%;
+  }
+
+div.footer-bottom-right {
+  float: right;
+  width: 50%;
+  text-align: right;
+  } */
