@@ -9,8 +9,12 @@ body {
 :root {
   --screen-max: 1200px;
   --base-font: 'Montserrat', sans-serif;
-  --footer-font: 'Pridi', sans-serif;
-  --footer-link-color: #d0cece;
+  --base-font-Pridi: 'Pridi', sans-serif;
+
+  --grey-light: #fefefe;
+  --grey-dark: #696969;
+
+  --font-color-dark: var(--grey-dark);
 }
 
 @font-face {
@@ -52,6 +56,10 @@ body {
 body {
   font-family: var(--base-font);
   font-size: 100%;
+  background: orange;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 html * {
@@ -90,22 +98,30 @@ header h1 {
 }
 
 main {
+  flex: 1;
   background: lightgrey;
 }
 
 footer {
   background: #333;
-  font-family: var(--footer-font);
+  font-family: var(--base-font-Pridi);
   font-size: 100%;
   font-weight: lighter;
 }
 
-footer .footer-top,
+footer .footer-top {
+  display: flex;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+}
+
 footer .footer-bottom {
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: grey;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  font-family: var(--base-font);
+  color: var(--grey-light);
+  opacity: .1;
 }
 
 footer .footer-left {
@@ -128,7 +144,7 @@ footer .footer-right ul {
 }
 
 footer a {
-  color: var(--footer-link-color);
+  color: var(--grey-light);
   text-decoration: none;
   text-transform: uppercase;
 }
