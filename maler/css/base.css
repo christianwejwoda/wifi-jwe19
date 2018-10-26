@@ -71,11 +71,10 @@ html * {
   z-index: 100;
   top: 0;
   left: 5em;
-
   width: 5em;
   height: 5em;
-
 }
+
 #logo a {
   display: block;
   width: 100%;
@@ -84,14 +83,15 @@ html * {
   background-size: contain;
   text-indent: -9999em;
   overflow: hidden;
+  padding-top: .5em;
 }
 
 #logo-part-2 {
-    position: absolute;
-    top: 0;
-    left: 10em;
-    width: 9em;
-    height: 5em;
+  position: absolute;
+  top: 0;
+  left: 10em;
+  width: 9em;
+  height: 5em;
 }
 
 #logo-part-2 a {
@@ -100,6 +100,13 @@ html * {
   height: 100%;
   background-color: white;
   color: var(--grey-dark);
+  font-family: var(--base-font);
+  color: var(--grey-dark);
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 1em;
+  padding-top: .5em;
 }
 
 header {
