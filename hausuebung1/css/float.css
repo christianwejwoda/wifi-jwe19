@@ -1,0 +1,28 @@
+
+div {
+  border-style: solid;
+
+}
+img {
+  height:170px;
+  margin: 5px;
+}
+.r {
+    float: right;
+}
+
+.l {
+    float: left;
+}
+
+.x {
+    float:none;
+}
+p.clear {
+    /* clear: both; */
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
