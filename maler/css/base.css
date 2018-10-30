@@ -7,8 +7,7 @@ body {
 }
 
 :root {
-  --screen-max: 95vw;
-  /* 1200px; */
+  --screen-max: 80vw;
   --base-font: 'Montserrat', sans-serif;
   --base-font-Pridi: 'Pridi', sans-serif;
   --grey-light: #fefefe;
@@ -55,7 +54,7 @@ body {
 body {
   font-family: var(--base-font);
   font-size: 100%;
-  background: orange;
+  /* background: orange; */
   display: flex;
   flex-flow: column;
   min-height: 100vh;
@@ -70,28 +69,31 @@ html * {
   position: fixed;
   z-index: 100;
   top: 0;
-  left: 5em;
-  width: 5em;
-  height: 5em;
+  left: 3em;
+  width: 6em;
+  height: 6em;
 }
 
 #logo a {
   display: block;
   width: 100%;
   height: 100%;
-  background: var(--grey-dark) url(../img/Logo_reduced_Muthwill_white.svg) no-repeat;
+  background: var(--grey-dark) url(../img/Logo_reduced_Muthwill_white.svg) 50% no-repeat;
   background-size: contain;
+  background-size: 80% 80%;
+  background-position: center;
   text-indent: -9999em;
   overflow: hidden;
-  padding-top: .5em;
+  /* padding: 0.5em; */
 }
 
 #logo-part-2 {
   position: absolute;
   top: 0;
-  left: 10em;
-  width: 9em;
-  height: 5em;
+  left: 9em;
+  width: 13em;
+  height: 6em;
+  justify-content: center;
 }
 
 #logo-part-2 a {
@@ -105,19 +107,23 @@ html * {
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
+  /* font-size: 1.3em; */
   padding-left: 1em;
-  padding-top: .5em;
+  padding-top: 1em;
 }
 
-header {
+.main-navigation {
+  display: none;
+}
+header#main-header {
   position: relative;
   width: 100%;
-  height: 45vw;
-  background: lightgreen;
+  height: 30vw;
+  /* background: lightgreen; */
   overflow: hidden;
 }
 
-header img {
+header#main-header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -126,14 +132,14 @@ header img {
 }
 
 main .inner-wrapper,
-header .inner-wrapper,
+header#main-header .inner-wrapper,
 footer .inner-wrapper {
   position: relative;
   max-width: var(--screen-max);
   margin: 0 auto;
 }
 
-header h1 {
+header#main-header h1 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -142,7 +148,34 @@ header h1 {
 
 main {
   flex: 1;
-  background: lightgrey;
+  /* background: lightgrey; */
+}
+
+.content_1 {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 25vw;
+  /* background: green; */
+  overflow: hidden;
+  /* background-color: ; */
+  background-blend-mode: color: orange;
+}
+/* .content_1::after {
+  content: '1956 Gründung des Unternehmens von Ernst Muthwill Senior. "Spezialisiert haben wir uns......"';
+  padding: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+} */
+
+.content_1 img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: center;
+ display: block;
 }
 
 footer {
@@ -178,7 +211,7 @@ footer a {
   }
 
   body {
-    background: blue;
+    /* background: blue; */
   }
 
   footer .footer-top {
