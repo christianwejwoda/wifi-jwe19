@@ -32,10 +32,6 @@ section.content-element {
   text-align: left;
 }
 
-.content-text {
-  /* padding-top: 2em; */
-}
-
 .content-element .button {
   display: inline-block;
   padding: 1em 2em;
@@ -49,14 +45,57 @@ section.content-element {
   opacity: .6;
 }
 
+.content-text_BRILLUX p {
+  text-align: center;
+}
+
+.content-element .button_BRILLUX {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: #00c4d3;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content-element a.button_BRILLUX:hover {
+  opacity: .6;
+}
+
 .content-text img {
-  width: 300px;
   display: block;
   margin: 1em 0;
 }
 
+.content-element .teaser_leistung {
+    background-color: #004d53;
+}
+
+.content-element .button_Termin {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: #ff6200;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content-element a.button_Termin:hover {
+  opacity: .6;
+}
+
 @media screen and (min-width: 576px) {
+  .content-element .teaser {
+    min-height: 30vw;
+  }
+
   .content-element p {
     width: 60%;
   }
+  .content-element img {
+    width: 50%;
+  }
+
 }
