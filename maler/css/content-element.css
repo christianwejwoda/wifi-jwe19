@@ -1,35 +1,63 @@
+
+/* allgemeines */
+:root {
+  --teaser_height_mobile: 70vw;
+  --teaser_height_desktop: 15vw;
+}
+
 section.content-element {
   display: block;
   position: relative;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  /* padding-top: 5em; */
+  /* padding-bottom: 5em; */
 }
 
 .content-element h2 {
   font-family: var(--base-font-Pridi);
-  font-size: 200%;
+  font-size: 2em;
   font-weight: lighter;
+  color: #535353;
 }
 
+.content-element p {
+  padding-top: 0.5em;
+  font-size: 80%;
+  text-align: left;
+}
+
+/* erste Sektion: Malermeister */
 .content-element .teaser {
   position: relative;
 
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 15vw;
-  padding-top: 10px;
-  padding-bottom: 10px;
   color: white;
 }
 
-.content-element p {
-  padding-top: 0.5em;
-  /* padding-bottom: 0.5em; */
-  /* font-size: 12px; */
-  font-size: 80%;
+.content-element .teaser img {
   width: 100%;
-  text-align: left;
+  height: var(--teaser_height_mobile);
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.content-element .image_overlay::after {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--teaser_height_mobile);
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background: rgba(255, 125, 0, 0.5);
+}
+
+.content-element .teaser_block1 {
+  top: calc(-1 * var(--teaser_height_mobile) );
+  z-index: 10;
 }
 
 .content-element .button {
@@ -43,6 +71,12 @@ section.content-element {
 
 .content-element a.button:hover {
   opacity: .6;
+}
+
+.content-text img {
+  display: block;
+  margin: 1em 0;
+  max-width: 100%;
 }
 
 .content-text_BRILLUX p {
@@ -63,12 +97,8 @@ section.content-element {
   opacity: .6;
 }
 
-.content-text img {
-  display: block;
-  margin: 1em 0;
-}
-
 .content-element .teaser_leistung {
+  height: var(--teaser_height_mobile);
     background-color: #004d53;
 }
 
@@ -87,15 +117,40 @@ section.content-element {
 }
 
 @media screen and (min-width: 576px) {
+
+  section.content-element {
+    padding-top: 5em;
+    /* padding-bottom: 5em; */
+  }
+
+  .content-element h2 {
+    font-size: 2em;
+  }
+
   .content-element .teaser {
-    min-height: 30vw;
+    /* min-height: 20vw; */
+    height: var(--teaser_height_desktop);
   }
 
   .content-element p {
+    font-size: 100%;
     width: 60%;
   }
   .content-element img {
     width: 50%;
   }
 
+  .content-element .teaser img {
+    height: var(--teaser_height_desktop);
+  }
+  .content-element .image_overlay::after {
+      height: var(--teaser_height_desktop);
+  }
+  .content-element .teaser_block1 {
+    top: calc(-1 * var(--teaser_height_desktop) );
+  }
+
+  .content-element .teaser_leistung {
+    height: var(--teaser_height_desktop);
+}
 }

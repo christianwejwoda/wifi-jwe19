@@ -54,7 +54,6 @@ body {
 body {
   font-family: var(--base-font);
   font-size: 100%;
-  /* background: orange; */
   display: flex;
   flex-flow: column;
   min-height: 100vh;
@@ -243,7 +242,11 @@ footer a {
   }
 
   header#main-header h1 {
-    font-size: 2em;
+    font-size: 3em;
+    color: white;
+    font-family: var(--base-font-Pridi);
+    font-weight: lighter;
+    
   }
 
   footer .footer-top {
