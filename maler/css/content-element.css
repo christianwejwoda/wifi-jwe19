@@ -14,14 +14,14 @@ section.content-element {
 
 .content-element h2 {
   font-family: var(--base-font-Pridi);
-  font-size: 2em;
+  font-size: 0.9em;
   font-weight: lighter;
   color: #535353;
 }
 
 .content-element p {
   padding-top: 0.5em;
-  font-size: 80%;
+  font-size: 0.7em;
   text-align: left;
 }
 
@@ -52,7 +52,8 @@ section.content-element {
     display: block;
     position: absolute;
     z-index: 10;
-    background: rgba(255, 125, 0, 0.5);
+    background: rgb(255,100,0);/* orange;*/
+    opacity:  0.4;
 }
 
 .content-element .teaser_block1 {

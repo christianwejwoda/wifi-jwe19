@@ -143,6 +143,9 @@ header#main-header h1 {
   left: 0;
   width: 100%;
   font-size: 1em;
+  color: white;
+  font-family: var(--base-font-Pridi);
+  font-weight: lighter;
 }
 
 main {
@@ -246,7 +249,7 @@ footer a {
     color: white;
     font-family: var(--base-font-Pridi);
     font-weight: lighter;
-    
+
   }
 
   footer .footer-top {
