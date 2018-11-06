@@ -1,15 +1,13 @@
 
 /* allgemeines */
 :root {
-  --teaser_height_mobile: 70vw;
+  --teaser_height_mobile: 50vw;
   --teaser_height_desktop: 15vw;
 }
 
 section.content-element {
   display: block;
   position: relative;
-  /* padding-top: 5em; */
-  /* padding-bottom: 5em; */
 }
 
 .content-element h2 {
@@ -38,27 +36,22 @@ section.content-element {
 .content-element .teaser img {
   width: 100%;
   height: var(--teaser_height_mobile);
-  object-fit: cover;
+  object-fit:cover;
   object-position: center;
-  z-index: -1;
 }
 
 .content-element .image_overlay::after {
     content: '';
     top: 0;
-    left: 0;
     width: 100%;
     height: var(--teaser_height_mobile);
     display: block;
     position: absolute;
-    z-index: 10;
-    background: rgb(255,100,0);/* orange;*/
-    opacity:  0.4;
+    background: rgba(255,100,0,0.4);
 }
 
 .content-element .teaser_block1 {
   top: calc(-1 * var(--teaser_height_mobile) );
-  z-index: 10;
 }
 
 .content-element .button {
@@ -129,8 +122,11 @@ section.content-element {
   }
 
   .content-element .teaser {
-    /* min-height: 20vw; */
     height: var(--teaser_height_desktop);
+  }
+
+  .content-element .teaser img {
+    object-fit: cover;
   }
 
   .content-element p {
@@ -145,7 +141,7 @@ section.content-element {
     height: var(--teaser_height_desktop);
   }
   .content-element .image_overlay::after {
-      height: var(--teaser_height_desktop);
+      /* height: var(--teaser_height_desktop); */
   }
   .content-element .teaser_block1 {
     top: calc(-1 * var(--teaser_height_desktop) );
