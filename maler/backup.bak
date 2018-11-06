@@ -1,0 +1,110 @@
+
+    <!-- zweite Sektion: BRILLUX -->
+    <section class="content-element">
+      <header class="inner-wrapper">
+        <h2>BRILLUX-Farbdesigner</h2>
+      </header>
+      <div class="teaser">
+        <img src="img/brillux-pad.jpg" alt="brillux-pad"></img>
+
+        <!-- <div class="inner-wrapper">
+          &nbsp;
+        </div> -->
+      </div>
+      <div class="inner-wrapper content-text_BRILLUX">
+        <p>
+          Visualisieren Sie Gestaltungsideen für Räume und Fassaden schnell und leicht mit
+        </p>
+        <p>
+
+          <a class="button_BRILLUX" href="#">BRILLUX Farbdesigner</a>
+
+        </p>
+      </div>
+    </section>
+
+    <!-- dritte Sektion: Leistungen und Service -->
+    <section class="content-element">
+
+      <header class="inner-wrapper">
+        <h2>LEISTUNGEN UND SERVICE</h2>
+      </header>
+
+      <div class="teaser teaser_leistung">
+        <div class="inner-wrapper">
+          <p>
+            Wenn Sie Ihr Heim professionell verschönern oder renovieren lassen wollen, stehen wir mit kompetenter Beratung und guten Service zur Verfügung.
+          </p>
+        </div>
+      </div>
+
+      <div class="inner-wrapper content-text_leistung">
+        <p>
+          Integraler Bestandteil unseres Leistungsangebotes - wie der
+          Fassadengestaltung und Fassadenanstriche, Renovierungen,
+          Oberflächenveredelung von Fußböden, Möbel und Holzverkleidungen,
+          Fassaden und Innenräumen ist eine fundierte Beratung.
+          <br /><br />
+
+          Wichtig sind das gesunde Raumklima sowie Farbe und ihre Eigenschaften
+          und Wirkungen auf den Betrachter/Bewohner.
+
+        </p>
+        <p>
+          Wenn Sie Heimwerker sind, unterstützen wir sie bei der Wahl des für sie
+          richtigen Produktes und sind behilflich bei der richtigen Farbton-Auswahl.
+          <br /><br />
+
+          Sie haben die Möglichkeit aus tausenden Farbtönen auszuwählen. Mit
+          unserer modernen Farbmischanlage können wir in wenigen Minuten die
+          Farben für sie mischen.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- vierte Sektion: Farbenfachgeschäft -->
+    <section class="content-element">
+      <header class="inner-wrapper">
+        <h2>Farbenfachgeschäft</h2>
+      </header>
+      <div class="teaser">
+        <img src="img/BX_Scala.jpg" alt="BX_Scala">
+        <div class="inner-wrapper teaser_block1">
+          <p>
+            Viele unserer Kunden sind nicht nur handwerklich
+            begabt, sondern laufen bei der
+            Wohnungsrenovierung zu wahrer Höchstform auf.
+            Voraussetzung für den Erfolg, bzw. den Spaß am
+            Heimwerken, ist jedoch Qualität bei der Farbe und
+            Werkzeug.
+
+          </p>
+        </div>
+      </div>
+      <div class="inner-wrapper">
+        <p>
+          Sie können sicher sein in unserem Fachgeschäft beides in Profi-Qualität
+          vorzufinden.
+          Den kleinen Tipp am Rande können wir Ihnen un unserem Fachgeschäft
+          natürlich sofort geben.
+          <br /><br />
+
+          Unsere Mitarbeiter werden laufend geschult und helfen Ihnen bei
+          Problemen und Fragen gerne weiter. Gleichzeitig profitieren Sie aber auch
+          von Know-How unserer Maler-Werkstätte.
+
+
+        </p>
+        <p>
+
+          <a class="button_Termin" href="#">Jetzt Termin vereinbaren</a>
+
+        </p>
+        <p>
+          <!-- <img src="img/BX_Faecher-Lack-Scala.jpg" alt="Fächer Lack Scala"> -->
+          <!-- <img src="img/verkaufsraum.png" alt="Verkaufraum"> -->
+
+        </p>
+      </div>
+    </section>

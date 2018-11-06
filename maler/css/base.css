@@ -13,6 +13,7 @@ body {
   --grey-light: #fefefe;
   --grey-dark: #696969;
   --font-color-dark: var(--grey-dark);
+  --main-padding: 1rem;
 }
 
 @font-face {
@@ -223,7 +224,6 @@ footer a {
   }
 
   #logo {
-    position: fixed;
     z-index: 100;
     top: 0;
     left: 3em;
@@ -249,7 +249,6 @@ footer a {
     color: white;
     font-family: var(--base-font-Pridi);
     font-weight: lighter;
-
   }
 
   footer .footer-top {
@@ -277,6 +276,15 @@ footer a {
 
 @media screen and (min-width: 768px) {}
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (min-width: 1150px) {
+  .content-element .content-text{
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+  }
+}
 
 @media screen and (min-width: 1200px) {}

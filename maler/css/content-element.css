@@ -1,20 +1,22 @@
-
 /* allgemeines */
 :root {
-  --teaser_height_mobile: 50vw;
-  --teaser_height_desktop: 15vw;
+  --color_font_grey: #535353;
 }
 
+/* Mobile first */
 section.content-element {
   display: block;
   position: relative;
 }
 
 .content-element h2 {
+  font-size: 1.2rem;
+  /* rem ist in abhängigkeit von der Standardschriftgröße*/
+  line-height: 1.2em;
+  /*em ist abhängig von der oben verwendeten font-size*/
   font-family: var(--base-font-Pridi);
-  font-size: 0.9em;
   font-weight: lighter;
-  color: #535353;
+  color: var(--color_font_grey);
 }
 
 .content-element p {
@@ -26,25 +28,35 @@ section.content-element {
 /* erste Sektion: Malermeister */
 .content-element .teaser {
   /* position: relative;
-    background-size: cover;
-    min-height: 35vw; */
-
-      position: relative;
-
   background-position: center center;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
-min-height: 35vw;
-  color: white;
+  min-height: 35vw; */
+  /* color: var(--color_font_grey); */
+  display: block;
+  align-items: center;
+  justify-content: left;
 }
 
 .content-element .teaser img {
-  display: block;
+
   position: relative;
+  z-index: -1;
   width: 100%;
   height: auto;
-  object-fit:cover;
-  object-position: bottom;
+
+  border: 2px solid black; /* nur zum Testen*/
+}
+
+@media screen and (min-width: 576px) {
+  .content-element .teaser {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .content-element .teaser img {
+    display: block;
+    z-index: -1;
+  }
 }
 
 .content-element .image_overlay {
@@ -56,14 +68,15 @@ min-height: 35vw;
   position: absolute;
   background: rgba(255,100,0,0.4); */
 }
+
 .content-element .image_overlay::after {
-    content: '';
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    background: rgba(255,100,0,0.4);
+  content: '';
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: rgba(255, 100, 0, 0.4);
 }
 
 .content-element .teaser_block1 {
@@ -109,7 +122,7 @@ min-height: 35vw;
 
 .content-element .teaser_leistung {
   height: var(--teaser_height_mobile);
-    background-color: #004d53;
+  background-color: #004d53;
 }
 
 .content-element .button_Termin {
@@ -127,10 +140,15 @@ min-height: 35vw;
 }
 
 @media screen and (min-width: 576px) {
+  .content-element h2 {
+    font-size: 6.5vw;
+    /* vw bedeutet viewport width ist also die größe des bildschirms*/
+  }
+}
 
+/*
   section.content-element {
     padding-top: 5em;
-    /* padding-bottom: 5em; */
   }
 
   .content-element h2 {
@@ -165,14 +183,11 @@ min-height: 35vw;
     z-index: -1;
   }
   .content-element .image_overlay::after {
-      /* height: var(--teaser_height_desktop); */
   }
   .content-element .teaser_block1 {
-
-    /* top: calc(-1 * var(--teaser_height_desktop) ); */
   }
 
   .content-element .teaser_leistung {
     height: var(--teaser_height_desktop);
 }
-}
+} */
