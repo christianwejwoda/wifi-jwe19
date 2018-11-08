@@ -1,19 +1,23 @@
 div.float-left,
 div.float-right
  {
-  display:flex;
+  display:block;
 }
 
 div.float-left p,
 div.float-right p {
+  float: left;
   border: 2px solid;
   padding: 20px;
 }
 
-div.float-right {
+div.float-right p {
   float: right;
 }
 
-p {
-  display: inline-block;
+.clear {
+  clear: both;
 }
+/* p {
+  display: inline-block;
+} */
