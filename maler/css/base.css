@@ -111,6 +111,16 @@ html * {
   padding-top: 1em;
 }
 
+#burger {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 1em;
+  width: 2em;
+  height: 2em;
+  background-color: var(--grey-dark);
+}
+
 .main-navigation {
   display: none;
 }
@@ -235,6 +245,21 @@ footer a {
 
   #logo-part-2 a {
   font-size: 1em;
+  }
+
+  #burger {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 3em;
+    width: 6em;
+    height: 6em;
+    background-color: var(--grey-dark);
+  }
+  #burger.burger-line1 {
+    position: absolute;
+    align-items: center;
+    width: 80%;
   }
 
   footer .footer-top {
