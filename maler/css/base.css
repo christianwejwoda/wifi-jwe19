@@ -115,7 +115,8 @@ html * {
   position: fixed;
   z-index: 100;
   top: 0;
-  right: 1em;
+  /* right: 1em; */
+  right: 3vw;
   width: 2em;
   height: 2em;
   background-color: var(--grey-dark);
@@ -306,7 +307,7 @@ footer a {
     position: fixed;
     z-index: 100;
     top: 0;
-    right: 3em;
+    /* right: 3em; */
     width: 6em;
     height: 6em;
     background-color: var(--grey-dark);

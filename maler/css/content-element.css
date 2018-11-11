@@ -115,6 +115,10 @@ section.content-element {
     color: white;
   }
 
+  .content-element .teaser p {
+    padding-right: 40vw;
+  }
+
   .content-element .teaser img {
     position: absolute;
     top: 0;
@@ -135,7 +139,7 @@ section.content-element {
     background-size: cover;
   }
 
-  .content-element .teaser > * {
+  .content-element .teaser>* {
     position: relative;
     z-index: 100;
   }
