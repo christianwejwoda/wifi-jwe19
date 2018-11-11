@@ -121,9 +121,61 @@ html * {
   background-color: var(--grey-dark);
 }
 
-.main-navigation {
-  display: none;
+/* https://css-tricks.com/three-line-menu-navicon/ */
+.box-shadow-menu {
+  display: block;
+  height: 100%;
+  position: relative;
+  padding-left: 0.5em;
 }
+
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  width: 1em;
+  height: 0.15em;
+  background: white;
+  box-shadow:
+    0 0.25em 0 0 white,
+    0 0.5em 0 0 white;
+}
+
+.box-shadow-menu:hover ul {
+  visibility: visible;
+}
+
+nav.main-navigation ul {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  width: 200px;
+  float: right;
+  top: 2em;
+  position: relative;
+}
+
+nav.main-navigation ul li a {
+  height: auto;
+  display: block;
+  background-color: var(--grey-dark);
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  /* font-size: 1em; */
+  text-align: right;
+  transition: all 0.3s ease;
+  font-size: .5em;
+}
+
+nav.main-navigation ul li:hover a {
+  background: black;
+  color: #ccc;
+}
+
 header#main-header {
   position: relative;
   width: 100%;
@@ -176,11 +228,11 @@ main {
 }
 
 .content_1 img {
- width: 100%;
- height: 100%;
- object-fit: cover;
- object-position: center;
- display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 footer {
@@ -210,8 +262,7 @@ footer a {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 576px) {
-}
+@media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {
   :root {
@@ -244,7 +295,7 @@ footer a {
   }
 
   #logo-part-2 a {
-  font-size: 1em;
+    font-size: 1em;
   }
 
   #burger {
@@ -256,10 +307,33 @@ footer a {
     height: 6em;
     background-color: var(--grey-dark);
   }
-  #burger.burger-line1 {
+
+  .box-shadow-menu {
+    position: relative;
+    padding-left: 1.5em;
+  }
+
+  .box-shadow-menu:before {
+    content: "";
     position: absolute;
-    align-items: center;
-    width: 80%;
+    top: 1.6em;
+    width: 3em;
+    height: 0.5em;
+    background: white;
+    box-shadow:
+      0 1em 0 0 white,
+      0 2em 0 0 white;
+  }
+
+  av.main-navigation ul {
+    width: 200px;
+    top: 6em;
+  }
+
+  nav.main-navigation ul li a {
+    padding: 20px;
+    font-size: 1em;
+    transition: all 0.3s ease;
   }
 
   footer .footer-top {
@@ -289,11 +363,8 @@ footer a {
   footer .inner-wrapper {
     /* padding-right: 20vw; */
   }
-
 }
 
 @media screen and (min-width: 992px) {}
 
-@media screen and (min-width: 1200px) {
-
-}
+@media screen and (min-width: 1200px) {}
