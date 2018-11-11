@@ -176,6 +176,10 @@ nav.main-navigation ul li:hover a {
   color: #ccc;
 }
 
+/* nav.main-navigation ul li a:focus ul {
+  display: none;
+} */
+
 header#main-header {
   position: relative;
   width: 100%;
@@ -325,7 +329,7 @@ footer a {
       0 2em 0 0 white;
   }
 
-  av.main-navigation ul {
+  nav.main-navigation ul {
     width: 200px;
     top: 6em;
   }
