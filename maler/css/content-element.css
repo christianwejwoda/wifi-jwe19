@@ -99,6 +99,77 @@ section.content-element {
   object-position: top;
 }
 
+.teaser_block_5 {
+  /* font-size: 0.7em; */
+  background-color: orange;
+}
+
+.content-text_contactform {
+  /* font-size: 0.7em; */
+  padding:-bottom: 1em;
+}
+
+.contactform_background {
+  background-color: #808080;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contactform {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto;
+  grid-template-areas:
+  'l_name'
+    'f_name'
+    'l_firma'
+    'f_firma'
+    'l_email'
+    'f_email'
+    'l_betreff'
+    'f_betreff'
+    'l_anliegen'
+    'f_anliegen'
+    'submit_button';
+}
+
+.contactform .labels {
+  color: white;
+}
+
+.label {
+  color: white;
+  font-size: 0.7em;
+  }
+.field {
+  width: 100%;
+}
+
+::placeholder {
+  color: lighter;
+  opacity: 0.4;
+  font-family: var(--base-font);
+  font-size: 0.7em;
+}
+
+.l_name { grid-area: l_name; }
+.f_name { grid-area: f_name; }
+.l_firma { grid-area: l_firma; }
+.f_firma { grid-area: f_firma; }
+.l_email { grid-area: l_email; }
+.f_email { grid-area: f_email; }
+.l_betreff { grid-area: l_betreff; }
+.f_betreff { grid-area: f_betreff; }
+.l_anliegen { grid-area: l_anliegen; }
+.f_anliegen { grid-area: f_anliegen; }
+.submit_button {
+  grid-area: submit_button;
+  background-color: orange;
+  height: 3em;
+  border-style: none;
+}
+
+
 @media screen and (min-width: 576px) {
   section.content-element {
     padding-top: 5em;
@@ -155,4 +226,22 @@ section.content-element {
   .content-element .teaser_leistung {
     height: var(--teaser_height_desktop);
   }
+  ::placeholder {
+    font-size: 100%;
+
+  }
+  .contactform {
+    grid-template-columns: 15vw 40vw;
+    grid-template-areas:
+      'l_name f_name'
+      'l_firma f_firma'
+      'l_email f_email'
+      'l_betreff f_betreff'
+      'l_anliegen f_anliegen'
+      '           submit_button';
+  }
+  .label {
+    font-size: 100%;
+    }
+
 }
