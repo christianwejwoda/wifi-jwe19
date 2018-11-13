@@ -118,7 +118,7 @@ section.content-element {
 .contactform {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: auto;
+  /* grid-template-columns: auto; */
   grid-template-areas:
     'l_name'
     'f_name'
@@ -144,6 +144,8 @@ section.content-element {
 
 .field {
   width: 100%;
+  border-style: none;
+  padding: 0.5em;
 }
 
 ::placeholder {
@@ -196,8 +198,17 @@ section.content-element {
 .submit_button {
   grid-area: submit_button;
   background-color: orange;
-  height: 3em;
   border-style: none;
+  width: 100%;
+  color: white;
+  font-size: 100%;
+  height: 2em;
+}
+
+.submit_button:hover {
+opacity: 0.5;
+transition: opacity 0.3s ease;
+
 }
 
 @media screen and (min-width: 576px) {
@@ -264,7 +275,8 @@ section.content-element {
   }
 
   .contactform {
-    grid-template-columns: 15vw 40vw;
+    grid-gap: 20px;
+    grid-template-columns: 15vw auto;
     grid-template-areas:
       'l_name f_name'
       'l_firma f_firma'
@@ -277,4 +289,9 @@ section.content-element {
   .label {
     font-size: 100%;
   }
+  .submit_button {
+    font-size: 1.2em;
+    height: 3em;
+  }
 }
+@media screen and (min-width: 1200px) {}
