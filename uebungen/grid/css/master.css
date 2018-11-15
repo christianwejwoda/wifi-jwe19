@@ -1,0 +1,78 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  /* grid-template-columns: repeat(5, 1fr) auto; */
+  grid-template-areas:
+    'header header header header header header'
+    'sidebarleft content content content sidebarright sidebarright'
+    'footer footer footer footer footer footer';
+  /* justify-items: stretch; */
+  /* align-items: stretch; */
+  padding: 10px;
+  height: 100%;
+}
+
+.header {
+  grid-area: header;
+  background: blue;
+}
+
+.content {
+  grid-area: content;
+  background: yellow;
+}
+
+.footer {
+  grid-area: footer;
+  background: green;
+}
+
+.sidebarleft {
+  grid-area: sidebarleft;
+  background: orange;
+}
+
+.sidebarright {
+  grid-area: sidebarright;
+  background: darkgray;
+}
+
+.wrapper div {
+  border: 3px black;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+/* inline Grid definitionen */
+
+.inline-grid-container {
+  /* float:right; */
+  background-color: coral;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  background-color: gray;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  border: 1px solid black;
+  color: white;
+}
+.grid-item5 {
+   grid-column-start: 2;
+   grid-column-end: 4;
+ }
+
+p::first-letter {
+  font-style: italic;
+}
