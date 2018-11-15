@@ -172,6 +172,9 @@ nav.main-navigation ul li a {
   font-size: .5em;
 }
 
+nav.main-navigation ul li a:target {
+  
+}
 nav.main-navigation ul li:hover a {
   background: black;
   color: #ccc;

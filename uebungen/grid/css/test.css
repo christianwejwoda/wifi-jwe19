@@ -1,0 +1,104 @@
+:root {
+  --screen-max: 80vw;
+  --base-font: 'Montserrat', sans-serif;
+  --base-font-Pridi: 'Pridi', sans-serif;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Light.ttf);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi/Pridi-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi/Pridi-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi/Pridi-Light.ttf);
+  font-weight: lighter;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr;
+  grid-template-areas:
+  'head head head'
+  'left center right'
+  'foot foot foot'
+}
+
+.head {
+  grid-area: head;
+  width: 100%;
+  height: 30px;
+  border-top: 2px solid lightgray;
+}
+
+.foot {
+  grid-area: foot;
+  width: 100%;
+  height: 30px;
+  border-bottom: 2px solid lightgray;
+}
+
+.left {
+  font-family:  var(--base-font);
+  grid-area: left;
+  border-right: 2px solid lightgray;
+  padding-left: 50px;
+}
+
+.left ul li {
+  list-style:square;
+}
+.left ul li a {
+  text-decoration: none;
+  color: black;
+}
+.center {
+  font-family:  var(--base-font);
+  grid-area: center;
+  padding-left: 50px;
+}
+.right {
+  font-family:  var(--base-font);
+  display: block;
+  grid-area: right;
+  border-left: 2px solid lightgray;
+  padding-left: 50px;
+  align-items:  center;
+}
+
+.button-contactform {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  border: 2px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+.button-contactform a {
+  text-decoration: none;
+  color: black;
+}
