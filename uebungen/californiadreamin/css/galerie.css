@@ -1,0 +1,31 @@
+.galerie {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.galerie img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.galerie .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  /* background-color: #008CBA; */
+  background-color: rgba(255, 100, 0, 0.7);
+}
+.galerie-container {
+  position: relative;
+}
+.galerie-container:hover .overlay {
+  opacity: 0.5;
+}

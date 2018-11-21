@@ -1,0 +1,55 @@
+.teaser {
+  color: black;
+  text-align: center;
+}
+
+.teaser-area {
+  padding-top: 20px;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'ta1 ta3 ta5'
+    'ta2 ta4 ta6';
+  /* justify-content: center; */
+}
+
+.teaser h2 {
+  text-transform: uppercase;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.teaser-head>* {
+  margin: 0;
+}
+
+.teaser img,
+.teaser img~div {
+  width: 100%;
+}
+
+.ta1 {
+  grid-area: ta1;
+}
+
+.ta2 {
+  grid-area: ta2;
+}
+
+.ta3 {
+  grid-area: ta3;
+}
+
+.ta4 {
+  grid-area: ta4;
+}
+
+.ta5 {
+  grid-area: ta5;
+}
+
+.ta6 {
+  grid-area: ta6;
+}
