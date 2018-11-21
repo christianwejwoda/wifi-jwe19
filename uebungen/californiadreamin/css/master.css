@@ -2,10 +2,17 @@
   /* --screen-max: 80vw; */
   --screen-max: 800px;
   --base-font: 'Montserrat', sans-serif;
+  --base-font-icomoon: 'icomoon';
   --base-font-Open_Sans: 'Open_Sans', sans-serif;
   --grey-light: #414141;
   --grey-dark: #202020;
   --font-color-dark: var(--grey-dark);
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(../fonts/icomoon.ttf);
+  font-weight: normal;
 }
 
 @font-face {
@@ -61,6 +68,9 @@ body {
   color: red !important;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
 .bold {
   font-weight: bold;
 }
@@ -71,6 +81,10 @@ body {
 
 .bigfont {
   font-size: 300%;
+}
+
+.midfont {
+  font-size: 150%;
 }
 
 .innerwraper {

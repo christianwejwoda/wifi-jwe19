@@ -1,0 +1,118 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    'contact-header contact-header contact-header'
+    'contact-map contact-map contact-map'
+    '. . .'
+    'contact-form contact-form contact-form';
+}
+
+.contact-header {
+  grid-area: contact-header;
+  padding-bottom: 30px;
+}
+.contact-header>p {
+  margin: 0;
+}
+.contact-map {
+  grid-area: contact-map;
+  width: 100%;
+}
+
+.contact-form {
+  grid-area: contact-form;
+
+  padding-top: 100px;
+  padding-bottom:  50px;
+
+  display: grid;
+  grid-column-gap:  15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  'form-label-name form-label-email form-label-subject'
+  'form-field-name form-field-email form-field-subject'
+  '. . .'
+  'form-label-message . .'
+  'form-field-message form-field-message form-field-message'
+  '. . .'
+  'form-field-submit . .';
+
+}
+
+.form-label {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+textarea, select,
+input[type=text], select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-right: 10px;
+    margin-top: 8px ;
+    margin-bottom: 8px ;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+input[type=submit], select {
+    width: 80%;
+    padding: 8px 10px;
+    margin-right: 10px;
+    margin-top: 8px ;
+    margin-bottom: 8px ;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: transparent;
+    color:red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+::placeholder {
+  font-family: var(--base-font-Open_Sans);
+  font-size: 80%;
+  opacity: 0.5;
+}
+
+.form-label-name {
+  grid-area: form-label-name;
+}
+
+.form-field-name {
+  grid-area: form-field-name;
+}
+
+.form-label-email {
+  grid-area: form-label-email;
+}
+
+.form-field-email {
+  grid-area: form-field-email;
+}
+
+.form-label-subject {
+  grid-area: form-label-subject;
+}
+
+.form-field-subject {
+  grid-area: form-field-subject;
+}
+
+.form-label-message {
+  grid-area: form-label-message;
+}
+
+.form-field-message {
+  grid-area: form-field-message;
+  height: 8em;
+}
+
+.form-field-submit {
+  grid-area: form-field-submit;
+}

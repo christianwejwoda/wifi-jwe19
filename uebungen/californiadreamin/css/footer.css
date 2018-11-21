@@ -1,6 +1,6 @@
 .footer {
   padding-top: 10px;
-  color: white;
+  color: grey;
   font-size: 60%;
   background-color: var(--grey-light);
 }
@@ -35,7 +35,7 @@
 }
 
 .footer a {
-  color: white;
+  color: grey;
 }
 
 .footer-dark {
