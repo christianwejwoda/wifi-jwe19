@@ -1,20 +1,23 @@
-
 .header {
   position: relative;
   color: white;
   height: 35vw;
 }
 
-.header>img {
-  position: absolute;
+.header-background-img {
+  position: relative;
+  width: 100%;
+}
+
+.header-background-img>img {
   width: 100%;
   height: auto;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 
 .header-text {
   position: absolute;
-      top: 16vw;
+  bottom: -4vw;
 }
 
 .header-add-img-1 {
@@ -22,6 +25,7 @@
   float: right;
   right: 50px;
 }
+
 .header-add-img-text {
   position: absolute;
   left: 50px;
@@ -29,8 +33,9 @@
   color: black;
   font-weight: bold;
 }
+
 .header-add-img-2 {
   position: absolute;
-  right:-50px;
-  top:-10px;
+  right: -50px;
+  top: -10px;
 }
