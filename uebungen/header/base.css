@@ -3,14 +3,7 @@ html, body {
   padding: 0;
 }
 
-.header {
-  /* display: flex;
-  flex-direction: column; */
-}
-
 .header-background-img {
-  /* border: 2px solid green; */
-
   position: relative;
   object-fit: cover;
 }
@@ -20,17 +13,13 @@ html, body {
 }
 
 .header-text {
-  /* border: 2px solid blue; */
   position: absolute;
   bottom: 100px;
   color: white;
 }
 
 .header-subbanner {
-  /* border: 2px solid yellow; */
-
   position: relative;
-  /* top:calc(-78px / 2); */
 }
 
 .header-subbanner .hs1 {

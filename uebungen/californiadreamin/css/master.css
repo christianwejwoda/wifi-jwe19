@@ -57,12 +57,9 @@ html * {
 
 body {
   display: block;
-  /* flex-direction: column; */
   font-family: var(--base-font-Open_Sans);
   font-size: 100%;
 }
-
-
 
 .redtext {
   color: red !important;
@@ -71,6 +68,7 @@ body {
 .uppercase {
   text-transform: uppercase;
 }
+
 .bold {
   font-weight: bold;
 }
@@ -89,9 +87,17 @@ body {
 
 .innerwraper {
   position: relative;
-  max-width: var(--screen-max);
   margin: 0 auto;
+  max-width: 100%
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+  .innerwraper {
+    max-width: var(--screen-max);
+  }
+
+  .smallfont {
+    font-size: 100%;
+  }
+}
