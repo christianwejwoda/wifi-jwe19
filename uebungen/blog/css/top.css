@@ -6,8 +6,9 @@
 .top .header {
   padding: 11px 5px;
   font-size: 2em;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   color: white;
+  background-image: linear-gradient(lightgray 80%, white );
 }
 
 .top .slider {
@@ -61,27 +62,6 @@
 #tr3:target~.two { visibility: hidden;}
 #tr3:target~.three { visibility: hidden;}
 
-/* #tr1:target~.one { visibility: hidden; transition: visibility 2s ease-out;}
-#tr1:target~.two { visibility: visible; transition: visibility 2s ease;}
-#tr1:target~.three { visibility: hidden; transition: visibility 2s ease-out;}
-
-#tr2:target~.one { visibility: hidden; transition: visibility 2s ease-out;}
-#tr2:target~.two { visibility: hidden; transition: visibility 2s ease-out;}
-#tr2:target~.three { visibility: visible; transition: visibility 2s ease;}
-
-#tr3:target~.one { visibility: visible; transition: visibility 2s ease;}
-#tr3:target~.two { visibility: hidden; transition: visibility 2s ease-out;}
-#tr3:target~.three { visibility: hidden; transition: visibility 2s ease-out;}
- */
-/* #tr1:target~.one-out { visibility: hidden;}
-#tr1:target~.two-in { visibility: visible;}
-#tr1:target~.tree-out { visibility: hidden;}
-
-#tr2:target~.one-out { visibility: hidden;}
-#tr2:target~.two-out { visibility: hidden;}
-#tr2:target~.tree-in { visibility: visible;} */
-
-
 .top .inlay {
   display: block;
   position: absolute;
@@ -89,7 +69,7 @@
   /* bottom: 0; */
   background-color: rgba(255, 255, 255, .3);
   color: #04B4AE;
-  height: 40px;
+  /* height: 40px; */
   width: 100%;
   transform: translateY(-150%);
   text-align: right;
@@ -97,8 +77,8 @@
 
 .top .inlay .inlay-text {
   margin-right: 10px;
-  /* height: 100%; */
   padding: 11px 5px;
+  font-size: 1.3em;
 }
 
 
