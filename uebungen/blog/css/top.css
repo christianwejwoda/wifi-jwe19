@@ -1,0 +1,108 @@
+.top {
+  grid-area: top;
+  width: 100%;
+}
+
+.top .header {
+  padding: 11px 5px;
+  font-size: 2em;
+  background-color: lightgray;
+  color: white;
+}
+
+.top .slider {
+  position: relative;
+  /* display: flex;
+    flex-direction: row; */
+  height: 28vw;
+}
+
+.slide-img1,
+.slide-img2,
+.slide-img3 {
+  width: 100%;
+  height: 28vw;
+  position: absolute;
+  /* top:0; */
+  /* left: 0; */
+}
+/* .slide-img2,
+.slide-img3 { */
+.two,
+.three  {
+  visibility: hidden;
+}
+.button-left,
+.button-right {
+  position: absolute;
+  padding: 10px;
+  background-color: white;
+  top: 12vw;
+  text-decoration: none;
+}
+
+.button-right {
+  right: 0;
+}
+
+.button-left {
+}
+
+#tr1:target~.one { visibility: hidden;}
+#tr1:target~.two { visibility: visible;}
+#tr1:target~.three { visibility: hidden;}
+
+#tr2:target~.one { visibility: hidden;}
+#tr2:target~.two { visibility: hidden;}
+#tr2:target~.three { visibility: visible;}
+
+#tr3:target~.one { visibility: visible;}
+#tr3:target~.two { visibility: hidden;}
+#tr3:target~.three { visibility: hidden;}
+
+/* #tr1:target~.one { visibility: hidden; transition: visibility 2s ease-out;}
+#tr1:target~.two { visibility: visible; transition: visibility 2s ease;}
+#tr1:target~.three { visibility: hidden; transition: visibility 2s ease-out;}
+
+#tr2:target~.one { visibility: hidden; transition: visibility 2s ease-out;}
+#tr2:target~.two { visibility: hidden; transition: visibility 2s ease-out;}
+#tr2:target~.three { visibility: visible; transition: visibility 2s ease;}
+
+#tr3:target~.one { visibility: visible; transition: visibility 2s ease;}
+#tr3:target~.two { visibility: hidden; transition: visibility 2s ease-out;}
+#tr3:target~.three { visibility: hidden; transition: visibility 2s ease-out;}
+ */
+/* #tr1:target~.one-out { visibility: hidden;}
+#tr1:target~.two-in { visibility: visible;}
+#tr1:target~.tree-out { visibility: hidden;}
+
+#tr2:target~.one-out { visibility: hidden;}
+#tr2:target~.two-out { visibility: hidden;}
+#tr2:target~.tree-in { visibility: visible;} */
+
+
+.top .inlay {
+  display: block;
+  position: absolute;
+  right: 0;
+  /* bottom: 0; */
+  background-color: rgba(255, 255, 255, .3);
+  color: #04B4AE;
+  height: 40px;
+  width: 100%;
+  transform: translateY(-150%);
+  text-align: right;
+}
+
+.top .inlay .inlay-text {
+  margin-right: 10px;
+  /* height: 100%; */
+  padding: 11px 5px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .top .header {
+    /* font-size: none; */
+  }
+}
