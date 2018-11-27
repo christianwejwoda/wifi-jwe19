@@ -39,6 +39,7 @@
   background-color: white;
   top: 12vw;
   text-decoration: none;
+  z-index: 10;
 }
 
 .button-right {
