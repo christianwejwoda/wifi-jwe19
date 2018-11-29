@@ -14,6 +14,7 @@ section.content-element {
   font-size: 0.9em;
   font-weight: lighter;
   color: #535353;
+  text-transform: uppercase;
 }
 
 .content-element p {
@@ -26,13 +27,14 @@ section.content-element {
 .content-element .teaser {
   position: relative;
   background-size: cover;
-  min-height: 30vw;
+  /* min-height: 30vw; */
 }
 
 .content-element .teaser img {
   display: block;
   position: relative;
   width: 100%;
+  /* width: 130%; */
   height: auto;
   object-fit: cover;
   object-position: bottom;
@@ -40,15 +42,24 @@ section.content-element {
 
 .content-element .button {
   display: inline-block;
-  padding: 1em 2em;
-  background-color: orange;
+  padding: 1em 8em;
+  background-color: #ff6200;
   border: none;
   color: white;
   text-decoration: none;
+  width:
 }
 
 .content-element a.button:hover {
   opacity: .6;
+}
+
+.content-text-e1 {
+  padding-right: 30vw;
+}
+
+.content-text {
+  font-size: 1.5em;
 }
 
 .content-text img {
@@ -63,7 +74,7 @@ section.content-element {
 
 .content-element .button_BRILLUX {
   display: inline-block;
-  padding: 1em 2em;
+  padding: 1em 8em;
   background-color: #00c4d3;
   border: none;
   color: white;
@@ -76,14 +87,18 @@ section.content-element {
 }
 
 .content-element .teaser_leistung {
-  height: var(--teaser_height_mobile);
+  min-height: var(--teaser_height_mobile);
   background-color: #004d53;
   color: white;
 }
 
+.content-element .content-text-leistung {
+  padding-right: 30vw;
+}
+
 .content-element .button_Termin {
   display: inline-block;
-  padding: 1em 2em;
+  padding: 1em 8em;
   background-color: #ff6200;
   border: none;
   color: white;
@@ -95,18 +110,62 @@ section.content-element {
   opacity: .6;
 }
 
+.pad-top50 {
+padding-top: 50px;
+}
 .content-element .teaser_block_4 img {
-  object-position: top;
+  object-position: top right;
+  object-fit: cover;
+}
+
+.content-element-banner {
+  display: flex;
+}
+
+.content-element-banner div {
+  width: 50%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.content-element-banner img {
+  width: 100%;
+}
+
+.content-element .overlay_gray::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+
+.content-element-farbenmischen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content-element-farbenmischen>div {
+  width: 40%;
+  /* padding: 60px; */
+}
+.content-element-farbenmischen img {
+  width: 100%;
 }
 
 .teaser_block_5 {
-  /* font-size: 0.7em; */
   background-color: orange;
   color: white;
+  height: 100px;
+  min-height: 15vw;
 }
 
 .content-text_contactform {
-  /* font-size: 0.7em; */
   padding: -bottom: 1em;
 }
 
@@ -119,7 +178,6 @@ section.content-element {
 .contactform {
   display: grid;
   grid-gap: 10px;
-  /* grid-template-columns: auto; */
   grid-template-areas:
     'l_name'
     'f_name'
@@ -140,7 +198,7 @@ section.content-element {
 
 .label {
   color: white;
-  font-size: 0.7em;
+  /* font-size: 0.7em; */
 }
 
 .field {
@@ -207,9 +265,8 @@ section.content-element {
 }
 
 .submit_button:hover {
-opacity: 0.5;
-transition: opacity 0.3s ease;
-
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 @media screen and (min-width: 576px) {
@@ -223,13 +280,14 @@ transition: opacity 0.3s ease;
 
   .content-element .teaser {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: left;
     color: white;
   }
 
   .content-element .teaser p {
     padding-right: 40vw;
+    font-size: 1.5em;
   }
 
   .content-element .teaser img {
@@ -262,17 +320,30 @@ transition: opacity 0.3s ease;
   }
 
   .content-element img {
-    width: 50%;
+    /* width: 70%; */
   }
 
   .content-element .teaser_leistung {
-    height: var(--teaser_height_desktop);
+    min-height: var(--teaser_height_desktop);
+    height: 100px;
   }
-}
-@media screen and (min-width: 768px) {
 
+.teaser_block_4 {
+  min-height: 30vw;
+}
+  .teaser_block_5 {
+    height: 100px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
   ::placeholder {
     font-size: 100%;
+  }
+
+  .content-element h2 {
+    font-size: 5em;
   }
 
   .contactform {
@@ -288,11 +359,13 @@ transition: opacity 0.3s ease;
   }
 
   .label {
-    font-size: 100%;
+    font-size: 1.5em;
   }
+
   .submit_button {
-    font-size: 1.2em;
+    font-size: 1.5em;
     height: 3em;
   }
 }
+
 @media screen and (min-width: 1200px) {}

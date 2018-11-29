@@ -48,6 +48,12 @@ body {
 @font-face {
   font-family: 'Pridi';
   src: url(../fonts/Pridi/Pridi-Light.ttf);
+  font-weight:200;
+}
+
+@font-face {
+  font-family: 'Pridi';
+  src: url(../fonts/Pridi/Pridi-ExtraLight.ttf);
   font-weight: lighter;
 }
 
@@ -64,188 +70,14 @@ html * {
   box-sizing: border-box;
 }
 
-#logo {
-  position: fixed;
-  z-index: 110;
-  top: 0;
-  left: 1em;
-  width: 2em;
-  height: 2em;
+.bold {
+  font-weight: bold;
 }
 
-#logo a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: var(--grey-dark) url(../img/Logo_reduced_Muthwill_white.svg) 50% no-repeat;
-  background-size: contain;
-  background-size: 80% 80%;
-  background-position: center;
-  text-indent: -9999em;
-  overflow: hidden;
-  /* padding: 0.5em; */
-}
 
-#logo-part-2 {
-  position: absolute;
-  top: 0;
-  left: 3em;
-  width: 4.1em;
-  height: 2em;
-  justify-content: center;
-}
-
-#logo-part-2 a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  color: var(--grey-dark);
-  font-family: var(--base-font);
-  color: var(--grey-dark);
-  text-align: left;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: .35em;
-  padding-left: 1em;
-  padding-top: 1em;
-}
-
-#burger {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  /* right: 1em; */
-  right: 3vw;
-  width: 2em;
-  height: 2em;
-  background-color: var(--grey-dark);
-}
-
-/* https://css-tricks.com/three-line-menu-navicon/ */
-.box-shadow-menu {
-  display: block;
-  height: 100%;
-  position: relative;
-  padding-left: 0.5em;
-}
-
-.box-shadow-menu:before {
-  content: "";
-  position: absolute;
-  top: 0.6em;
-  width: 1em;
-  height: 0.15em;
-  background: white;
-  box-shadow:
-    0 0.25em 0 0 white,
-    0 0.5em 0 0 white;
-}
-
-.box-shadow-menu:hover ul {
-  visibility: visible;
-}
-
-nav.main-navigation ul {
-  visibility: hidden;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  flex-direction: column;
-  width: 200px;
-  float: right;
-  top: 2em;
-  position: relative;
-}
-
-nav.main-navigation ul li a {
-  height: auto;
-  display: block;
-  background-color: var(--grey-dark);
-  color: white;
-  text-decoration: none;
-  padding: 20px;
-  /* font-size: 1em; */
-  text-align: right;
-  transition: all 0.3s ease;
-  font-size: .5em;
-}
-
-/* nav > .close,
-  nav a#nav-m:target {
-    display: none;
-  }
-
-  nav a:target ~ ul,
-  nav a:target ~ .close {
-    display: inline-block;
-  }
-
-  nav a:target ~ .close {
-    position: absolute;
-    margin-left: -40px;
-  } */
-/* nav a:target ~ ul {
-  visibility: hidden;
-} */
-.main-navigation:focus .main-navigation-ul {
-    display: block;
-}
-.main-navigation-ul {
-    position: absolute;
-    z-index: 1;
-
-    display: none;
-}
-
-nav.main-navigation ul li:hover a {
-  background: black;
-  color: #ccc;
-}
-
-/* nav.main-navigation ul li a:focus ul {
-  display: none;
-} */
-
-header#main-header {
-  position: relative;
-  width: 100%;
-  height: 45vw;
-  overflow: hidden;
-}
-
-header#main-header img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-header#main-header .inner-wrapper,
-.content-element .inner-wrapper,
-footer .inner-wrapper {
-  position: relative;
-  max-width: var(--screen-max);
-  margin: 0 auto;
-}
-
-header#main-header h1 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  font-family: var(--base-font-Pridi);
-  font-weight: lighter;
-  font-size: 5vw;
-  line-height: 1.2em;
-  text-transform: uppercase;
-  /* color: white; */
-}
 
 main {
   flex: 1;
-  /* background: lightgrey; */
 }
 
 .content_1 {
@@ -253,9 +85,7 @@ main {
   position: relative;
   width: 100%;
   height: 25vw;
-  /* background: green; */
   overflow: hidden;
-  /* background-color: ; */
   background-blend-mode: color: orange;
 }
 
@@ -267,133 +97,12 @@ main {
   display: block;
 }
 
-footer {
-  background: #333;
-  font-family: var(--base-font-Pridi);
-  font-size: 100%;
-  font-weight: lighter;
-}
-
-footer .footer-bottom {
-  font-family: var(--base-font);
-  color: var(--grey-light);
-  opacity: .1;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-footer ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer a {
-  color: var(--grey-light);
-  text-decoration: none;
-  text-transform: uppercase;
-}
 
 @media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {
   :root {
     --screen-max: 80vw;
-  }
-
-  header#main-header {
-    position: relative;
-    width: 100%;
-    height: 45vw;
-    overflow: hidden;
-  }
-
-  #logo {
-    position: fixed;
-    z-index: 110;
-    top: 0;
-    left: 3em;
-    width: 6em;
-    height: 6em;
-  }
-
-  #logo-part-2 {
-    position: absolute;
-    top: 0;
-    left: 9em;
-    width: 13em;
-    height: 6em;
-    justify-content: center;
-  }
-
-  #logo-part-2 a {
-    font-size: 1em;
-  }
-
-  #burger {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    /* right: 3em; */
-    width: 6em;
-    height: 6em;
-    background-color: var(--grey-dark);
-  }
-
-  .box-shadow-menu {
-    position: relative;
-    padding-left: 1.5em;
-  }
-
-  .box-shadow-menu:before {
-    content: "";
-    position: absolute;
-    top: 1.6em;
-    width: 3em;
-    height: 0.5em;
-    background: white;
-    box-shadow:
-      0 1em 0 0 white,
-      0 2em 0 0 white;
-  }
-
-  nav.main-navigation ul {
-    width: 200px;
-    top: 6em;
-  }
-
-  nav.main-navigation ul li a {
-    padding: 20px;
-    font-size: 1em;
-    transition: all 0.3s ease;
-  }
-
-  footer .footer-top {
-    display: flex;
-    margin-top: 20px;
-  }
-
-  footer .footer-left {
-    flex: 1;
-  }
-
-  footer .footer-right {
-    flex: 1;
-    text-align: right;
-  }
-
-  footer .footer-right ul {
-    text-align: right;
-  }
-
-  footer .footer-bottom {
-    display: flex;
-  }
-
-  header#main-header .inner-wrapper,
-  .content-element .inner-wrapper,
-  footer .inner-wrapper {
-    /* padding-right: 20vw; */
   }
 }
 
