@@ -1,0 +1,21 @@
+.header {
+  height: 40vw;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+.header img {
+  width: 100%;
+}
+
+.siegel {
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+.siegel img {
+  width: 30%;
+}

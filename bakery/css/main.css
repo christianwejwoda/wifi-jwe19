@@ -1,0 +1,26 @@
+.main {
+  text-align: center;
+  color: black;
+  padding-bottom: 40px;
+}
+
+.main p {
+  padding-bottom: 20px;
+}
+
+.orderbutton {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: lighter;
+  border: 2px solid var(--brown);
+  color: var(--brown);
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.orderbutton a {
+  display: inline-block;
+}
+.main h1 {
+      font-size: 5vw;
+}

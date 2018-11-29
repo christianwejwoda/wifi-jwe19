@@ -1,0 +1,59 @@
+.nav {
+  /* display: block; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  z-index: 10;
+}
+
+.nav-container {
+  padding: 5px 20px;
+  background-color: var(--white);
+  display: grid;
+  /* grid-row-gap: 40px; */
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'ga-logo'
+    '.'
+    'ga-menu';
+}
+
+.logo {
+  grid-area: ga-logo;
+}
+
+.logo img {
+  /* display: inline-block; */
+  width: 200px;
+}
+
+.menu {
+  grid-area: ga-menu;
+}
+
+.menu ul {
+  float: right;
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.menu ul li {
+  padding-left: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+@media screen and (min-width: 576px) {
+  .nav-container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      'ga-logo  ga-menu';
+  }
+}
+
+@media screen and (min-width: 768px) {}
