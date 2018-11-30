@@ -1,0 +1,154 @@
+.contactform_background {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.contactform {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    'l_name'
+    'f_name'
+    'l_firma'
+    'f_firma'
+    'l_email'
+    'f_email'
+    'l_betreff'
+    'f_betreff'
+    'l_anliegen'
+    'f_anliegen'
+    'submit_button';
+}
+
+.label {
+  /* width: 100%; */
+  color: var(--grey);
+}
+
+.field {
+  width: 100%;
+  border:1px solid var(--grey);
+  padding: 0.5em;
+}
+
+::placeholder {
+  color: lighter;
+  opacity: 0.4;
+  font-family: var(--base-font);
+  font-size: 0.7em;
+}
+
+.gender {
+  grid-area: gender;
+}
+.radio {
+margin-right: 30px;
+}
+.l_name {
+  grid-area: l_name;
+}
+
+.f_name {
+  grid-area: f_name;
+}
+
+.l_firma {
+  grid-area: l_firma;
+}
+
+.f_firma {
+  grid-area: f_firma;
+}
+
+.l_email {
+  grid-area: l_email;
+}
+
+.f_email {
+  grid-area: f_email;
+}
+
+.l_betreff {
+  grid-area: l_betreff;
+}
+
+.f_betreff {
+  grid-area: f_betreff;
+}
+
+.l_anliegen {
+  grid-area: l_anliegen;
+}
+
+.f_anliegen {
+  grid-area: f_anliegen;
+}
+
+.l_date {
+  grid-area: l_date;
+}
+
+.f_date {
+  grid-area: f_date;
+}
+
+.contactform-infobanner {
+grid-area: f_infobanner;
+padding-left: 20px;
+color:var(--grey);
+line-height: 2em;
+font-weight: bold;
+}
+
+.submit_button {
+  grid-area: submit_button;
+  background-color: var(--brown);
+  border-style: none;
+  /* width: 100%; */
+  color: white;
+  font-size: 100%;
+  height: 2em;
+  padding: 0 40px;
+}
+
+.submit_button:hover {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  ::placeholder {
+    font-size: 100%;
+  }
+
+.contactform {
+    grid-gap: 20px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    'gender dummy'
+    'l_name dummy'
+      'f_name f_infobanner'
+      'l_email f_infobanner'
+      'f_email f_infobanner'
+      'l_betreff f_infobanner'
+      'f_betreff f_infobanner'
+      'l_date f_infobanner'
+      'f_date f_infobanner'
+      'l_anliegen f_infobanner'
+      'f_anliegen f_infobanner'
+      'consent f_infobanner'
+      'submit_button f_infobanner';
+  }
+.dummy{
+  grid-area: dummy;
+}
+  .label {
+    font-size: 1.5em;
+  }
+
+  .submit_button {
+    font-size: 1.5em;
+    height: 3em;
+  }
+}
