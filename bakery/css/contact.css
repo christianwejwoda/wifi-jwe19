@@ -7,28 +7,32 @@
 .contactform {
   display: grid;
   grid-gap: 10px;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    'l_name'
-    'f_name'
-    'l_firma'
-    'f_firma'
-    'l_email'
-    'f_email'
-    'l_betreff'
-    'f_betreff'
-    'l_anliegen'
-    'f_anliegen'
-    'submit_button';
+  'gender'
+  'l_name'
+  'f_name'
+  'l_email'
+  'f_email'
+  'l_betreff'
+  'f_betreff'
+  'l_date'
+  'f_date'
+  'l_anliegen'
+  'f_anliegen'
+  'consent'
+  'submit_button'
+  '.'
+  'f_infobanner';
 }
 
 .label {
-  /* width: 100%; */
   color: var(--grey);
 }
 
 .field {
-  width: 100%;
-  border:1px solid var(--grey);
+  width: 95%;
+  border: 1px solid var(--grey);
   padding: 0.5em;
 }
 
@@ -42,9 +46,11 @@
 .gender {
   grid-area: gender;
 }
+
 .radio {
-margin-right: 30px;
+  margin-right: 30px;
 }
+
 .l_name {
   grid-area: l_name;
 }
@@ -94,11 +100,11 @@ margin-right: 30px;
 }
 
 .contactform-infobanner {
-grid-area: f_infobanner;
-padding-left: 20px;
-color:var(--grey);
-line-height: 2em;
-font-weight: bold;
+  grid-area: f_infobanner;
+  padding-left: 20px;
+  color: var(--grey);
+  line-height: 2em;
+  font-weight: bold;
 }
 
 .submit_button {
@@ -117,17 +123,19 @@ font-weight: bold;
   transition: opacity 0.3s ease;
 }
 
+@media screen and (min-width: 576px) {}
+
 @media screen and (min-width: 768px) {
   ::placeholder {
     font-size: 100%;
   }
 
-.contactform {
+  .contactform {
     grid-gap: 20px;
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
-    'gender dummy'
-    'l_name dummy'
+      'gender dummy'
+      'l_name dummy'
       'f_name f_infobanner'
       'l_email f_infobanner'
       'f_email f_infobanner'
@@ -137,12 +145,14 @@ font-weight: bold;
       'f_date f_infobanner'
       'l_anliegen f_infobanner'
       'f_anliegen f_infobanner'
-      'consent f_infobanner'
-      'submit_button f_infobanner';
+      'consent consent'
+      'submit_button submit_button';
   }
-.dummy{
-  grid-area: dummy;
-}
+
+  .dummy {
+    grid-area: dummy;
+  }
+
   .label {
     font-size: 1.5em;
   }

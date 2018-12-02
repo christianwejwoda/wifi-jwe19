@@ -1,9 +1,7 @@
 .nav {
-  /* display: block; */
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
-
   z-index: 10;
 }
 
@@ -11,21 +9,19 @@
   padding: 5px 20px;
   background-color: var(--white);
   display: grid;
-  /* grid-row-gap: 40px; */
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas:
-    'ga-logo'
-    '.'
-    'ga-menu';
+    'ga-logo  ga-menu';
 }
 
 .logo {
   grid-area: ga-logo;
+
+  padding-top: 20px;
 }
 
 .logo img {
-  /* display: inline-block; */
-  width: 200px;
+  width: 100px;
 }
 
 .menu {
@@ -35,7 +31,7 @@
 .menu ul {
   float: right;
   list-style: none;
-  display: flex;
+  display: block;
   padding: 0;
 }
 
@@ -49,10 +45,19 @@
 }
 
 @media screen and (min-width: 576px) {
-  .nav-container {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-      'ga-logo  ga-menu';
+  .nav {
+    position: fixed;
+  }
+
+  .logo {
+    padding-top:0   ;
+  }
+  .logo img {
+    width: 200px;
+  }
+
+  .menu ul {
+    display: flex;
   }
 }
 
