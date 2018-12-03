@@ -1,12 +1,15 @@
 .header {
+  position: relative;
   height: 40vw;
   object-fit: cover;
   object-position: center;
   overflow: hidden;
+  z-index: -1;
 }
 
 .header img {
   width: 100%;
+  z-index: -1;
 }
 
 .siegel {
@@ -24,6 +27,7 @@
     right: 0;
     transform: translateY(-50%);
     text-align: right;
+    width: 20vw;
   }
   .siegel img {
     width: 30%;

@@ -31,7 +31,7 @@
             <li> <a href="index.html">Startseite</a> </li>
             <li> <a href="ueberuns.html">Über uns</a> </li>
             <li><a href="team.html">Unser Team</a></li>
-            <li><a href="#">Gallerie</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
             <li><a href="contact.html">Kontakt</a></li>
           </ul>
         </div>
@@ -40,8 +40,12 @@
   </nav>
 
   <header>
+
     <div class="header">
-      <img src="img/pexels-photo-205961.jpeg" alt="Cupcakes">
+      <img src="img/pexels-photo-205961 (2).jpeg" alt="Cupcakes">
+      <img src="img/pexels-photo-745988 (2).jpeg" alt="Cupcakes">
+      <img src="img/pexels-photo-1251179.jpeg" alt="Cupcakes">
+      <img src="img/pexels-photo-1454985.jpeg" alt="Cupcakes">
     </div>
     <div class="innerwrapper">
       <div class="siegel">
@@ -99,7 +103,7 @@
               <a href="team.html">Unser Team</a>
             </li>
             <li>
-              <a href="#">Gallerie</a>
+              <a href="galerie.html">Galerie</a>
             </li>
             <li>
               <a href="contact.html">Kontakt</a>
@@ -127,7 +131,23 @@
 
   </section>
 
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/jquery-migrate-1.4.1.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+
+  <script>
+      $(document).ready(function(){
+          $(".header").slick({
+              dots: false,
+              arrows: false,
+              infinite: true,
+              speed: 500,
+              fade: true,
+              cssEase: "linear",
+              autoplay: true
+          });
+      });
+  </script>
 
 </body>
-
 </html>
