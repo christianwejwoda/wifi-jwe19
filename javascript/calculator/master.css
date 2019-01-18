@@ -1,0 +1,9 @@
+.wrapper {
+  width: 300px;
+  height: 100px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
