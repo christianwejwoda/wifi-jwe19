@@ -9,35 +9,39 @@
 </head>
 
 <body>
-  <form class="" action="index.html" method="post">
-    <textarea class="wrapper display" name="display" rows="8" cols="80"></textarea>
+  <form class="calc" action="index.html" method="post">
+    <!-- <textarea class="wrapper display" name="display" rows="1" cols="20"></textarea> -->
+    <input type="text" class="wrapper display" name="disp" disabled id="display" />
 
     <div class="wrapper mainGrid">
 
-      <input type="button" value="1">
-      <input type="button" value="2">
-      <input type="button" value="3">
-      <input type="button" value="+">
+      <input type="button" class="calc_button bclear" value="C">
+      <input type="button" class="calc_button bdiv" value="/">
+      <input type="button" class="calc_button bmulti" value="*">
+      <input type="button" class="calc_button bdel" value="del">
 
-      <input type="button" value="4">
-      <input type="button" value="5">
-      <input type="button" value="6">
-      <input type="button" value="-">
+      <input type="button" class="calc_button b7" value="7">
+      <input type="button" class="calc_button b8" value="8">
+      <input type="button" class="calc_button b9" value="9">
+      <input type="button" class="calc_button bminus" value="-">
 
-      <input type="button" value="7">
-      <input type="button" value="8">
-      <input type="button" value="9">
-      <input type="button" value="*">
+      <input type="button" class="calc_button b4" value="4">
+      <input type="button" class="calc_button b5" value="5">
+      <input type="button" class="calc_button b6" value="6">
+      <input type="button" class="calc_button bplus" value="+">
 
-      <input type="button" value="C">
-      <input type="button" value="0">
-      <input type="button" value=".">
-      <input type="button" value="=">
+      <input type="button" class="calc_button b1" value="1">
+      <input type="button" class="calc_button b2" value="2">
+      <input type="button" class="calc_button b3" value="3">
+      <input type="button" class="calc_button bequal" value="=">
+
+      <input type="button" class="calc_button b0" value="0">
+      <input type="button" class="calc_button bcomma" value=".">
 
     </div>
   </form>
 
-  <script src="../js/vendor/jquery.js" charset="utf-8"></script>
+  <script src="js/vendor/jquery.js" charset="utf-8"></script>
   <script src="calc.js" charset="utf-8"></script>
 </body>
 

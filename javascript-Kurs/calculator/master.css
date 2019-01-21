@@ -1,9 +1,146 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.calc {
+  display: inline-block;
+  /* border: 3px solid green; */
+  /* padding: 5px; */
+  background-color: lightgrey;
+  /* width: 95%;
+  height: 95%; */
+}
+
 .wrapper {
-  width: 300px;
-  height: 100px;
+  width: 100%;
+  /* width: 300px; */
+}
+
+.display {
+  border: 1px solid black;
+  margin: 0 0 5px 0;
+  font-size: 10vh;
+  text-align: right;
+  background-color: white;
+  min-height: 25vw;
+}
+
+.calc_button {
+  background-color: ivory;
+  min-height: 15vh;
+  font-size: 15vw;
+}
+
+@media screen and (min-width: 1024px) {
+  /* html, body {
+    width: 0;
+    height: 0;
+  } */
+
+  .calc {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+  }
+
+  .wrapper {
+    width: 300px;
+  }
+
+  .display {
+    min-height: 1vw;
+    font-size: 40px;
+    padding: 5px 0;
+  }
+
+  .calc_button {
+    min-height: 1vw;
+    font-size: 35px;
+  }
 }
 
 .mainGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'bclear bdiv bmulti bdel'
+    'b7 b8 b9 bminus'
+    'b4 b5 b6 bplus'
+    'b1 b2 b3 bequal'
+    'b0 b0 bcomma bequal';
+}
+
+.bclear {
+  grid-area: bclear;
+}
+
+.bdiv {
+  grid-area: bdiv;
+}
+
+.bmulti {
+  grid-area: bmulti;
+}
+
+.bdel {
+  grid-area: bdel;
+}
+
+.bminus {
+  grid-area: bminus;
+}
+
+.bplus {
+  grid-area: bplus;
+}
+
+.bequal {
+  grid-area: bequal;
+}
+
+.bcomma {
+  grid-area: bcomma;
+}
+
+.b0 {
+  grid-area: b0;
+}
+
+.b1 {
+  grid-area: b1;
+}
+
+.b2 {
+  grid-area: b2;
+}
+
+.b3 {
+  grid-area: b3;
+}
+
+.b4 {
+  grid-area: b4;
+}
+
+.b5 {
+  grid-area: b5;
+}
+
+.b6 {
+  grid-area: b6;
+}
+
+.b7 {
+  grid-area: b7;
+}
+
+.b8 {
+  grid-area: b8;
+}
+
+.b9 {
+  grid-area: b9;
 }
