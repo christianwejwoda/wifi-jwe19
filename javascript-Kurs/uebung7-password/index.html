@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+<link rel="stylesheet" href="js/jQuery-File-Upload-9.28.0/css/style.css">
+  <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+
+  <h1 class="center">It's a Form</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <form class="container-fluid masterForm">
+
+          <div class="form-group row">
+            <label class="col-4" for="anrede">Anrede</label>
+            <select class="form-control col-8" id="anrede">
+              <option value="">bitte eine Anrede auswählen</option>
+              <option value="Herr">Herr</option>
+              <option value="Frau">Frau</option>
+              <option value="Familie">Familie</option>
+              <option value="unbekannt">weiß nicht</option>
+            </select>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-4" for="vorname">Vorname</label>
+            <input type="text" class="form-control col-8 testName" id="vorname" placeholder="Vorname" autocomplete="off" required>
+            <!-- <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Looks bad!
+          </div> -->
+
+          </div>
+
+          <div class="form-group row">
+            <label class="col-4" for="nachname">Nachname</label>
+            <input type="text" class="form-control col-8 testName" id="nachname" placeholder="Nachname" autocomplete="off" required>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-4" for="email">E-Mail address</label>
+            <input type="email" class="form-control col-8" id="email" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off" required>
+            <div class="col-4" hidden></div>
+            <small id="emailHelpEmpty" class="form-text text-muted col-8" hidden>E-Mail darf nicht leer sein</small>
+            <div class="col-4"></div>
+            <small id="emailHelp" class="form-text text-muted col-8">Wir werden Ihre E-Mail Adresse nicht weitergeben.</small>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-4" for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control col-8 kb-password" id="exampleInputPassword1" placeholder="Password" autocomplete="off" required>
+          </div>
+          <div class="form-group row">
+            <label class="col-4" for="exampleInputPassword2">Password wiederholen</label>
+            <input type="password" class="form-control col-8 kb-password" id="exampleInputPassword2" placeholder="Password" autocomplete="off" required>
+            <div class="col-4"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-8">
+              <small class="criteria" id="length">Mindestens 8 Zeichen lang</small>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-8">
+              <small class="criteria" id="letter">Enthält einen Buchstaben</small>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-8">
+              <small class="criteria" id="capital">Enhält einen Großbuchstaben</small>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-8">
+              <small class="criteria" id="number">Enthält eine Zahl</small>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-8">
+              <small class="criteria" id="special">Enthält ein Sonderzeichen</small>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-8">
+              <small class="criteria" id="pwValInfo">Passwörter gleich</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="form-label col-4" for="gebdate">Geburtsdatum</label>
+            <input type="text" class="form-control col-8" id="gebdate">
+          </div>
+
+          <div class="form-group row">
+            <div class="col-4">Anzahl Kinder</div>
+            <label class="col-1" for="gruppe1">0 <input id="gruppe1" type="radio" name="radio-button-gruppe" value="0" /></label>
+            <label class="col-1" for="gruppe2">1 <input id="gruppe2" type="radio" name="radio-button-gruppe" value="1" /></label>
+            <label class="col-1" for="gruppe3">2 <input id="gruppe3" type="radio" name="radio-button-gruppe" value="2" /></label>
+            <label class="col-2" for="gruppe4">viele <input id="gruppe4" type="radio" name="radio-button-gruppe" value="3" /></label>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-4">Dateien bitte</div>
+            <!-- <span class="btn btn-success fileinput-button"> -->
+            <!-- <i class="glyphicon glyphicon-plus"></i> -->
+            <!-- <span>Select files...</span> -->
+            <!-- The file input field used as target for the file upload widget -->
+            <!-- <div class="custom-file col-8">
+              <input type="file" class="custom-file-input" id="fileupload"  name="files[]" multiple required>
+              <label class="custom-file-label" for="fileupload">Choose file...</label>
+              <div class="invalid-feedback">Example invalid custom file feedback</div>
+            </div> -->
+            <input class="col-8" id="fileupload" type="file" name="files[]" multiple>
+            <!-- </span> -->
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <!-- The global progress bar -->
+            <div id="progress" class="progress col-8">
+              <div class="progress-bar progress-bar-success"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <!-- The container for the uploaded files -->
+            <div id="files" class="files  col-8"></div>
+          </div>
+
+
+          <div class="form-group row">
+            <label class="form-label col-4" for="AGBcheck">ich akzeptiere die AGB</label>
+            <input type="checkbox" class="form-check-input col-8" id="AGBcheck" autocomplete="off" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+  <script src="js/jQuery-File-Upload-9.28.0/js/vendor/jquery.ui.widget.js"></script>
+  <script src="js/jQuery-File-Upload-9.28.0/js/jquery.iframe-transport.js"></script>
+  <script src="js/jQuery-File-Upload-9.28.0/js/jquery.fileupload.js"></script>
+
+  <script>
+    // $(function() {
+    //   $("#datepicker").datepicker();
+    // });
+    $(document).ready(function() {
+      var date_input = $('input[id="gebdate"]'); //our date input has the name "date"
+      var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+      var options = {
+        format: 'dd.mm.yyyy',
+        startDate: '-120y',
+        endDate: '-18y',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    });
+  </script>
+
+  <script src="js/my.js"></script>
+
+</body>
+
+</html>
