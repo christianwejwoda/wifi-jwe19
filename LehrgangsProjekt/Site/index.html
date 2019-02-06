@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Meine Druckerei (ein Lehrgangsprojekt am WIFI Salzburg)</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+  <link rel="stylesheet" href="js/jQuery-File-Upload-9.28.0/css/style.css">
+  <link rel="stylesheet" href="css/master.css">
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <form class="container-fluid masterForm">
+
+          <!-- Produkte: zB: Budget Softcover, Standard, Premium -->
+          <div class="form-group row">
+            <label class="col-3" for="produkt">Produkt</label>
+            <select class="form-control col-9" id="produkt">
+              <option value="">bitte eine Produktoption auswählen</option>
+              <option value="prod1">Softcover</option>
+              <option value="prod2">Standard</option>
+              <option value="prod3">Premium</option>
+            </select>
+          </div>
+
+          <!-- Auswahl der Farbe -->
+          <div class="form-group row">
+            <label class="col-3" for="favcolor">Farbe</label>
+            <input type="color" class="col-9" name="favcolor" id="favcolor" value="#ffffff">
+            <!-- https://www.w3schools.com/colors/colors_picker.asp -->
+          </div>
+
+          <!-- Vorderseite inkl. Texteingabe -->
+          <div class="form-group row">
+            <label class="col-3" for="frontpagetext">Text für die Vorderseite</label>
+            <textarea class="col-9" name="frontpagetext" id="frontpagetext" rows="8" cols="80"></textarea>
+          </div>
+
+          <!-- Ein‐/Beidseitiger Druck -->
+          <div class="form-group row">
+            <div class="col-3">Seitenoption</div>
+            <label class="col-2" for="seitenoption1"><input id="seitenoption1" type="radio" name="radio-button-gruppe" value="1" />  einseitig</label>
+            <label class="col-2" for="seitenoption2"><input id="seitenoption2" type="radio" name="radio-button-gruppe" value="2" />  beiseitig</label>
+          </div>
+
+          <!-- Seitenanzahl -->
+          <div class="form-group row">
+            <label class="col-3" for="quantity">Seitenanzahl (min. 10 Seiten)</label>
+            <input class="col-1" type="number" name="quantity" id="quantity" min="10" value="10">
+          </div>
+
+          <!-- Papier‐Grammatur (Gewicht: 100 ‐ 160g/m²) -->
+          <div class="form-group row">
+            <div class="col-3">Papier‐Grammatur</div>
+            <label class="col-2" for="pg1"><input id="pg1" type="radio" name="radio-button-gruppe" value="1" />  100 g/m²</label>
+          <!-- </div>
+          <div class="form-group row">
+            <div class="col-3"></div> -->
+            <label class="col-2" for="pg2"><input id="pg2" type="radio" name="radio-button-gruppe" value="2" />  115 g/m²</label>
+          <!-- </div>
+          <div class="form-group row">
+            <div class="col-3"></div> -->
+            <label class="col-2" for="pg3"><input id="pg3" type="radio" name="radio-button-gruppe" value="2" />  135 g/m²</label>
+          <!-- </div>
+          <div class="form-group row">
+            <div class="col-3"></div> -->
+            <label class="col-2" for="pg4"><input id="pg4" type="radio" name="radio-button-gruppe" value="2" />  160 g/m²</label>
+          </div>
+
+          <!-- Randloser Druck -->
+          <div class="form-group row">
+            <label class="form-label col-3" for="randloserdruck">Randloser Druck</label>
+            <input type="checkbox" id="randloserdruck" autocomplete="off" required>
+          </div>
+
+          <!-- Upload (Coverseite‐PDF, Inhaltsseiten‐PDF) -->
+          <div class="form-group row">
+            <div class="col-3">Dateien bitte</div>
+            <input class="col-3" id="fileupload" type="file" name="files[]" multiple>
+            <!-- The container for the uploaded files -->
+            <div id="files" class="files col-6"></div>
+          </div>
+          <div class="form-group row">
+            <div class="col-3"></div>
+            <!-- The global progress bar -->
+            <div id="progress" class="progress col-9">
+              <div class="progress-bar progress-bar-success"></div>
+            </div>
+          </div>
+
+          <!-- Produktionszeit -->
+          <div class="form-group row">
+            <label class="form-label col-3" for="liefertermin">gewünschter Liefertermin</label>
+            <input type="text" class="form-control col-2" id="liefertermin">
+          </div>
+
+        </form>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+
+  <!-- Produkte: zB: Budget Softcover, Standard, Premium -->
+  <!-- Auswahl der Farbe -->
+  <!-- Vorderseite inkl. Texteingabe -->
+  <!-- Ein‐/Beidseitiger Druck -->
+  <!-- Seitenanzahl -->
+  <!-- Papier‐Grammatur (Gewicht: 100 ‐ 160g/m²) -->
+  <!-- Randloser Druck -->
+  <!-- Upload (Coverseite‐PDF, Inhaltsseiten‐PDF) -->
+  <!-- Produktionszeit -->
+  <!-- Auftragspauschale & Zusatzoptionen -->
+  <!-- Automatische Berechnung des Preises: Stückpreis + Auftragspauschale und -->
+  <!-- Zusatzoptionen (Express, Sonderformate etc.), = Gesamtpreis zzgl. Versand -->
+  <!-- Informationen zu Versandkosten und Auftragspauschale -->
+  <!-- Erstellung und automatisierter Versand eines Angebots auf Basis vordefinierter Werte an den Admin -->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+  <script src="js/jQuery-File-Upload-9.28.0/js/vendor/jquery.ui.widget.js"></script>
+  <script src="js/jQuery-File-Upload-9.28.0/js/jquery.iframe-transport.js"></script>
+  <script src="js/jQuery-File-Upload-9.28.0/js/jquery.fileupload.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      var date_input = $('input[id="liefertermin"]'); //our date input has the name "date"
+      var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+      var options = {
+        format: 'dd.mm.yyyy',
+        startDate: '+10d',
+        endDate: '+1y',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    });
+  </script>
+
+  <script src="js/my.js"></script>
+</body>
+
+</html>
