@@ -1,0 +1,44 @@
+
+
+.item1 {
+  grid-area: myArea;
+  /* grid-column: 1 / 5; */
+}
+.item5 {
+  /* grid-row: 2 / span 2; */
+  grid-area: 1 / 2 / 5 / 6;
+}
+
+.grid-container {
+  display: grid;
+  /* height: 400px; */
+    grid-template-columns: auto auto auto auto auto auto;
+   /* grid-template-columns: 80px 200px auto 40px; */
+   /* grid-template-rows: 80px 200px; */
+
+ /* justify-content: space-evenly; */
+/* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+   /* justify-content: start; */
+   /* justify-content: end; */
+    align-content: center;
+  /* align-content: space-evenly; */
+   /* align-content: space-around; */
+  /* align-content: space-between; */
+  /* align-content: start; */
+
+ /* grid-template-areas: 'myArea myArea . . .'; */
+ grid-template-areas: 'myArea myArea . . .' 'myArea myArea . . .';
+ 
+  background-color: #2196F3;
+  padding: 10px;
+ grid-gap: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}

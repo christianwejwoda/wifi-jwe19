@@ -1,0 +1,10 @@
+
+.main {
+  grid-area: main;
+  color: black;
+}
+
+.main ol,
+.main ul {
+  padding-inline-start: 15px;
+}
