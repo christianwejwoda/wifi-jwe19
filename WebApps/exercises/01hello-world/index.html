@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <p>Dies ist eine ganz normale Html-Seite.</p>
+
+    <!-- Innerhalb dieses divs wird das React Element gerendert -->
+    <div id="root"></div>
+
+    <!-- React laden -->
+    <!-- Anmerkung: Nicht fuer Produktiv-Betrieb geeignet -> react.production.min.js, react-dom.production.min.js-->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <script>
+      // Referenz auf root-div erfragen
+      const domContainer = document.getElementById('root');
+
+      // React-Element erstellen - <h1>Hello World!</h1>
+      const element = React.createElement(
+        // Typ des Elements
+        "h1",
+        // Attribunte / Props
+        null,
+        // Children
+        "Hello World!"
+      );
+
+      // Element in der HTML Seite rendern
+      ReactDOM.render(
+        // React Element das gerendert werden soll
+        element,
+        // Referenz auf den Container
+        domContainer
+      );
+
+    </script>
+  </body>
+</html>

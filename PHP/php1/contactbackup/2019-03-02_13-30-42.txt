@@ -1,0 +1,9 @@
+Kontaktformularanfrage:
+Anrede: Frau
+Name: Maria
+E-Mail: m@gmx.xxx
+Lieferungsdatum: 2019-03-31
+DSGVO: Nein
+
+Inhalt:
+gaaaaaaaaaaanz viel Torte, bitte

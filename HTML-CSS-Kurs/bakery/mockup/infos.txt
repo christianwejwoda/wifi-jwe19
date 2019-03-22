@@ -1,0 +1,22 @@
+https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700
+
+/*var*/
+:root {
+    --brown: #D0B085;
+    --grey: #707070;
+    --white: #FFFFFF;
+
+    /*BUTTON VARIABLEN*/
+    --btn-border: solid var(--brown) 2px;
+    --btn-padding: 0.75em 1.2em 0.45em;
+    --btn-margin: 1em auto;
+
+
+    /* Costum Breakpoints*/
+
+    --min-xs: 480px;
+    --min-sm: 768px;
+    --min-md: 992px;
+    --min-lg: 1280px;
+    --min-xlg: 1600px;
+}

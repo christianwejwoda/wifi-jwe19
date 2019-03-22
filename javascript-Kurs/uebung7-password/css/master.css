@@ -1,0 +1,17 @@
+.center {
+  text-align: center;
+  padding: 20px;
+}
+
+.valide {
+  background-color: lightgreen;
+}
+
+.in-valide {
+  background-color: red;
+}
+
+.bar {
+    height: 18px;
+    background: green;
+}

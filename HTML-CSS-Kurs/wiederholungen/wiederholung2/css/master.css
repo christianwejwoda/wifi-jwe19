@@ -1,0 +1,9 @@
+header {
+  font-size: 2em;
+}
+
+.answer {
+  font-size: 4em;
+  align-items: center;
+  justify-content: center;
+  }

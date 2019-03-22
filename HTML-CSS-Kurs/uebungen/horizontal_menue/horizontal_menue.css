@@ -1,0 +1,92 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  background: grey;
+}
+
+.clearfix {
+  clear: both;
+}
+
+nav.main-navigation ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+}
+
+nav.main-navigation ul::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0;
+  clear: both;
+}
+
+nav.main-navigation>ul>li {
+  display: block;
+  float: left;
+  background: grey;
+  margin: 0 10px;
+  position: relative;
+}
+
+nav.main-navigation ul li a {
+  height: auto;
+  display: block;
+  background: grey;
+  padding: 20px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+nav.main-navigation>ul>li>ul {
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 300ms ease-out;
+  z-index: -1;
+}
+
+nav.main-navigation>ul>li>ul>li>ul {
+  position: absolute;
+  transform: translateX(0);
+  transition: all 300ms ease-out;
+  transition: scale 300ms ;
+  transform: scale(0);
+  z-index: -2;
+  visibility: hidden;
+}
+nav.main-navigation>ul>li>ul>li:hover ul {
+  display: block;
+  visibility: visible;
+  transform: translateX(100%);
+  transform: scale(100%);
+  transition: scale 300ms ;
+}
+
+nav.main-navigation ul li ul li {
+  display: block;
+  width: 200px;
+}
+
+nav.main-navigation ul li:hover a {
+  background: black;
+  color: #ccc;
+}
+
+nav.main-navigation ul li ul li:hover a {
+  background: #666;
+  color: lightgrey;
+}
+
+nav.main-navigation>ul>li:hover ul {
+  display: block;
+  transform: translateY(0);
+}
+
+a {
+  color: white;
+}
