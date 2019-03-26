@@ -6,21 +6,24 @@ import React from 'react';
 // auch in Fahrenheit eingeben können
 // Schritt 1: extrahieren einer eingenen Komponente für die Eingabe
 
-export default class TemperatureInput extends  React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {temperatur: ""};
-  }
+// Aktuell hat jede TemperatureInput Komponente ihre eigene Temperatur
+// Ziel: beide Eingabefelder werden synchronisiert.
+//     dh. wenn Celsius aktualiert wird dann Fahrenheit anpassen und umgekehrt
+// In React wird dies ermöglicht, indem man den state ind den nähesten gemeinsamen
+// Vorfahren verschiebt ("lifting state up")
+// Dh. wir verschieben den staet von TemperatureInput nach Calculator
+//     Calculator ist "single source of truth"
 
-  handleChange = (event) => {
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
-    this.setState({[name]: value});
+// temperature ist nun props
+export default class TemperatureInput extends React.Component {
+
+  handleChange = (e) => {
+    this.props.onTemperatureChange(e.target.value);
   }
 
   render() {
     const scale = this.props.scale;
+    const temperature = this.props.temperature;
 
     return (
       <fieldset>
@@ -28,7 +31,7 @@ export default class TemperatureInput extends  React.Component {
         <input
           type="text"
           name="temperatur"
-          value={this.state.temperatur}
+          value={temperature}
           onChange={this.handleChange} />
       </fieldset>
     );
