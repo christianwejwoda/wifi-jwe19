@@ -1,0 +1,59 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-background-img {
+  position: relative;
+  object-fit: cover;
+}
+
+.header-background-img>img {
+  width: 100%;
+}
+
+.header-text {
+  position: absolute;
+  bottom: 100px;
+  color: white;
+}
+
+.header-subbanner {
+  position: relative;
+}
+
+.header-subbanner .hs1 {
+  width: 569px;
+  height: 78px;
+  background-image: url(img/overlay-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  position: absolute;
+
+  right:0;
+/*
+  top:0; */
+  transform: translateX(-20px) translateY(-50%);
+
+}
+
+.header-subbanner .hs2 {
+  position: absolute;
+  right:0;
+  top:50%;
+  transform: translateX(20px) translateY(-50%);
+}
+
+.header-subbanner .hs1 p {
+  text-align: left;
+  margin-left: 5%;
+  font-size: 150%;
+}
+
+.innerwrapper {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  width: 100%;
+}

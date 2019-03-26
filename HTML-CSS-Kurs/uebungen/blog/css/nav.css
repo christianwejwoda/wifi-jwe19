@@ -1,0 +1,36 @@
+.nav {
+  grid-area: nav;
+  background-color: #04B4AE;
+  opacity: 0.5;
+  color: #045FB4;
+
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.nav p {
+  font-size: 2em;
+  margin: 5px;
+
+}
+
+.nav ul  {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 5px;
+  margin: 0 auto;
+}
+.nav ul li  {
+  padding: 0 5px;
+}
+.nav ul li a {
+  /* font-size: 1em; */
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav ul  {
+  display: block;
+}
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabellen</title>
+    <link rel="stylesheet" href="table.css">
+  </head>
+  <body>
+<table width = "50%" border = "1" >
+  <caption>this is the caption</caption>
+  <thead>
+    <th>Stk.</th>
+    <th>Warenbeschreibung</th>
+    <th>Preis</th>
+  </thead>
+  <tbody>
+    <tr> <!-- Zeile 1 -->
+      <td>25</td>
+      <td>Kartoffeln</td>
+      <td>€ 30,00</td>
+    </tr>
+
+    <tr> <!-- Zeile 2 -->
+      <td rowspan="2">80</td>
+      <td>Erbsen</td>
+      <td>€ 30,00</td>
+    </tr>
+
+    <tr> <!-- Zeile 3 -->
+      <!-- <td>80</td> -->
+      <td>Eier</td>
+      <td>€ 30,00</td>
+    </tr>
+
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Fußzeile</td>
+    </tr>
+  </tfoot>
+</table>
+
+  </body>
+</html>

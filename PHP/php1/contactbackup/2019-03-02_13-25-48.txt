@@ -1,0 +1,10 @@
+Kontaktformularanfrage:
+Anrede: Herr
+Name: Christian
+E-Mail: christian@wejwoda.at
+Lieferungsdatum: 2019-03-31
+DSGVO: Nein
+
+Inhalt:
+Test Nachricht
+                         

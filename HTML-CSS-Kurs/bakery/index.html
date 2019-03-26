@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/teaser.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <title>Bakery</title>
+
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="innerwrapper">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html"><img src="img/Logo-placeholder.png" alt="Logo"></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li> <a href="index.html">Startseite</a> </li>
+            <li> <a href="ueberuns.html">Über uns</a> </li>
+            <li><a href="team.html">Unser Team</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+
+    <div class="header">
+      <img src="img/pexels-photo-205961 (2).jpeg" alt="Cupcakes">
+      <img src="img/pexels-photo-745988 (2).jpeg" alt="Cupcakes">
+      <img src="img/pexels-photo-1251179.jpeg" alt="Cupcakes">
+      <img src="img/pexels-photo-1454985.jpeg" alt="Cupcakes">
+    </div>
+    <div class="innerwrapper">
+      <div class="siegel">
+        <img src="img/qualitaetssiegel-goldene-eichel_300.png" alt="Qualitätssiegel goldene Eichel">
+      </div>
+    </div>
+  </header>
+
+  <teaser class="teaser innerwrapper">
+    <div class="teaser-header">
+      <h1>unser Sortiment</h1>
+    </div>
+    <div class="teaser-container">
+      <img class="teaser-img1" src="img/320x230.png" alt="img1">
+      <img class="teaser-img2" src="img/320x230.png" alt="img2">
+      <img class="teaser-img3" src="img/320x230.png" alt="img3">
+      <img class="teaser-img4" src="img/320x230.png" alt="img4">
+    </div>
+  </teaser>
+
+  <main class="main">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+    <a href="#">
+      <div class="orderbutton">Bestellung aufnehmen</div>
+    </a>
+
+  </main>
+
+
+  <section class="footer">
+    <div class="footer-light innerwrapper">
+      <div class="footer-content">
+
+        <div class="footer-content-2">
+          Konditorei Bakery
+          <br>
+          John Doe
+          <br>
+          Uferweg 10
+          <br>
+          1001 Wien
+          <br>
+          +43 1 23456748
+          <br>
+          <a href="stammgast@mcdonalds.at">stammgast@mcdonalds.at</a>
+        </div>
+        <div class="footer-content-3">
+          <ul>
+            <li>
+              <a href="ueberuns.html">Über uns</a>
+            </li>
+            <li>
+              <a href="team.html">Unser Team</a>
+            </li>
+            <li>
+              <a href="galerie.html">Galerie</a>
+            </li>
+            <li>
+              <a href="contact.html">Kontakt</a>
+            </li>
+            <li>
+              <a href="#">Impressum</a>
+            </li>
+            <li>
+              <a href="#">Datenschutz und Cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-dark">
+      <div class="innerwrapper">
+        <div class="footer-dark-left">
+          Copyright 2017 | John Doe
+        </div>
+        <div class="footer-dark-right">
+          <a href="#">FACEBOOK</a> | <a href="#">YOUTUBE</a> | <a href="#">TWITTER</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/jquery-migrate-1.4.1.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+
+  <script>
+      $(document).ready(function(){
+          $(".header").slick({
+              dots: false,
+              arrows: false,
+              infinite: true,
+              speed: 500,
+              fade: true,
+              cssEase: "linear",
+              autoplay: true
+          });
+      });
+  </script>
+
+</body>
+</html>
