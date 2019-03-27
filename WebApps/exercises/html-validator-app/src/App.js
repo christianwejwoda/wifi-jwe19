@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import ValidatorAppBar from "./ValidatorAppBar";
-import FullWidthTabs from "./FullWidthTabs";
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import pink from '@material-ui/core/colors/pink';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: pink,
-    background: {
-      default: "#e0e0e0"
-    }
-  }
-});
+import { Route } from "react-router-dom";
+import InputOptions from "./InputOptions";
+import ResultList from "./ResultList";
 
 export default class App extends Component {
 
@@ -23,11 +12,8 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <MuiThemeProvider theme={theme} >
-          <CssBaseline />
-          <ValidatorAppBar />
-          <FullWidthTabs />
-        </MuiThemeProvider>
+        <Route path="/" exact component={InputOptions}/>
+        <Route path="/ResultList" component={ResultList}/>
       </>
     );
   }
